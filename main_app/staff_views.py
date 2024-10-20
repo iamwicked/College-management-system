@@ -299,7 +299,7 @@ def fetch_student_result(request):
             'exam': result.exam,
             'test': result.test
         }
-        return HttpResponse(json.dumps(result_data))
+        return HttpResponse(json.dumps(result_data), content_type="application/json")
     except Exception as e:
         return HttpResponse('False')
 
